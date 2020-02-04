@@ -3,11 +3,11 @@
 
 На самом шасси соответственно нужно настроить пользователя с правами на чтение и включить SNMPv3.
 Для проверки корректности настроек, можно с zabbix сервера отправить команду:
-snmpwalk -v 3 -u USERNAME -a SHA -A PASSWORD -l authNoPriv IP_CMM 1.3.6.1.4.1.2.3.51.2.2.7.1.0
+    snmpwalk -v 3 -u USERNAME -a SHA -A PASSWORD -l authNoPriv IP_CMM 1.3.6.1.4.1.2.3.51.2.2.7.1.0
 В ответ должны получить состояние системы в цифровом виде.
 
 В шаблоне Zabbix нужно настроить два макроса:
-{$FLEX_USER}
-{$FLEX_PASS}
+*{$FLEX_USER}
+*{$FLEX_PASS}
 
 P.s. Выложил Lenovo mib файлы.
